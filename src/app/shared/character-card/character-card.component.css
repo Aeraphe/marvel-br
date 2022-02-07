@@ -1,0 +1,42 @@
+.card {
+
+  margin: 5px;
+  background-color: black;
+  height: 242px;
+}
+
+.card__header {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  border-bottom: 3px solid red;
+  height: 142px;
+}
+.card__header img {
+  width: 192px;
+  height: 142px;
+}
+
+.card a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  height: 0px;
+
+  transition: 0.3s;
+}
+
+.card a:hover{
+   
+    background-color: red;
+    height: 242px;
+}
+
+.card__body {
+  font-family: RobotoCondensed, Trebuchet MS, Helvetica, Arial, sans-serif;
+ 
+
+  
+  width: 192px;
+  padding: 11px;
+}
