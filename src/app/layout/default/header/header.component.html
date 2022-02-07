@@ -24,5 +24,15 @@
       </div>
     </div>
   </div>
+  <div class="menu" >
+    <div>
+      <ul  class="menu__items" >
+        <li><a [routerLink]="['/']" class="desktopNav__link" href="#">Home</a></li>
+        <li><a [routerLink]="['/']" class="desktopNav__link" href="#">Search</a></li>
+        <li><a [routerLink]="['/']" class="desktopNav__link" href="#">Comics</a></li>
+        <li><a [routerLink]="['/']" class="desktopNav__link" href="#">Movies</a></li>
+      </ul>
+    </div>
+  </div>
   <app-mobile-menu [open]="navState" (close)="closeNav($event)"></app-mobile-menu>
 </header>
