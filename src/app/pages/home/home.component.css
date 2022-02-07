@@ -25,11 +25,22 @@
 
 }
 
-@media (min-width: 839px) {
+
+@media (min-width:600px) {
   .cards-content {
     grid-template-columns: repeat(auto-fit, minmax(192px, 1fr));
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     
+    
+  }
+}
+
+@media (max-width: 600px) {
+  .cards-content__mobile {
+    
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border: 35px solid;
+  margin: 10px;
   }
 }
 
