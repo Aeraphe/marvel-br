@@ -1,6 +1,7 @@
 <section class="container">
   <app-shared-searchbar
     (onChange)="onChangeInput($event)"
+    [searchText]="searchText"
   ></app-shared-searchbar>
   <div class="fetching" *ngIf="fetching">Pesquisando...</div>
   <div class="warning" *ngIf="warning">Não foi encontrado Nenhum Registro</div>

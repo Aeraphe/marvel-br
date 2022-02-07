@@ -13,31 +13,42 @@ export class HomeComponent implements OnInit {
   fetching = false;
   warning = false;
   error = false;
+  searchText: string | null = '';
+
   constructor(private http: CharacterService, private router: Router) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.searchText = sessionStorage.getItem('searchText');
+    this.getCharactersHandle(this.searchText);
+  }
 
   onChangeInput(searchText: string) {
-    try {
-      this.fetching = true;
-      this.warning = false;
-      this.error = false;
-      this.characters$ = this.http.getCharacters(searchText).pipe(
-        map((item) => {
-          this.fetching = false;
-          if (+item.data.total === 0) {
-            this.warning = true;
-          }
+    this.getCharactersHandle(searchText);
+  }
 
-          return item.data.results;
-        })
-      );
+  private getCharactersHandle(searchText: string | null) {
+    try {
+      if (searchText !== null && searchText !== '') {
+        sessionStorage.setItem('searchText', searchText);
+        this.fetching = true;
+        this.warning = false;
+        this.error = false;
+        this.characters$ = this.http.getCharacters(searchText).pipe(
+          map((item) => {
+            this.fetching = false;
+            if (+item.data.total === 0) {
+              this.warning = true;
+            }
+
+            return item.data.results;
+          })
+        );
+      }
     } catch (error) {
       this.error = true;
       console.error('obs', error);
     }
   }
-
   showCharacterDetails(id: number) {
     this.router.navigate(['/character-details/' + id]);
   }
