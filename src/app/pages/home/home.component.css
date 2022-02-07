@@ -28,6 +28,8 @@
 @media (min-width: 839px) {
   .cards-content {
     grid-template-columns: repeat(auto-fit, minmax(192px, 1fr));
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    
   }
 }
 
