@@ -1,0 +1,38 @@
+.header{
+    margin: 0;
+    padding: 0;
+}
+
+.header__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+.header__container_theme{
+ 
+    height: 50px;
+    background-color: #202020;
+    color: aliceblue;
+}
+
+
+.mobile_nav__open{
+    position: relative;
+    display: flex;
+    height: 100%;
+    z-index: 1;
+
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 15px;
+
+}
+
+.header__search_content{
+    padding: 0 30px ;
+
+}
+
