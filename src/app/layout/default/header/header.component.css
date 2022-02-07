@@ -38,3 +38,13 @@
 
 }
 
+
+
+@media (min-width: 839px){
+    .mobile_nav__open {
+      
+      visibility: hidden;
+
+  }
+  }
+  
