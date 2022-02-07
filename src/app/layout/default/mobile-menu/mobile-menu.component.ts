@@ -8,6 +8,8 @@ import {
   Output,
 } from '@angular/core';
 
+import { menuItem } from '../menuItems';
+
 @Component({
   selector: 'app-mobile-menu',
   templateUrl: './mobile-menu.component.html',
@@ -20,6 +22,8 @@ export class MobileMenuComponent implements OnInit, OnChanges {
 
   close = false;
 
+  menuItem = [''];
+
   constructor() {}
 
   ngOnChanges(changes: SimpleChanges) {
@@ -28,7 +32,9 @@ export class MobileMenuComponent implements OnInit, OnChanges {
     }
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.menuItem = menuItem;
+  }
 
   closeMenu() {
     this.closeNavEvt.emit(false);

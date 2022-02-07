@@ -6,7 +6,7 @@
       </a>
     </div>
   <ul class="nav__items">
-    <li><a [routerLink]="['/']" (click)="closeMenu()">HOME</a>  </li>
+    <li *ngFor="let item of menuItem"><a class="nav__item-link" [routerLink]="['/']" (click)="closeMenu()"><samp class="nav__item_name">{{item}}</samp> <span class="nav__item_icon"><img src="/assets/svg/menu-arrow.svg"/></span> </a>  </li>
   </ul>
   </nav>
 </div>

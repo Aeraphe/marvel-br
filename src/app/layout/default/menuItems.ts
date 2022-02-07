@@ -1,0 +1,1 @@
+export const   menuItem =['Home','Search','Comics','Movies'];
