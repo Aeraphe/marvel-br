@@ -9,30 +9,24 @@
     </div>
 
     <div class="header__title">
-      <div >
-        <a href="#" >
-          <img  src="assets/svg/marvel-logo.svg" />
+      <div>
+        <a href="#">
+          <img src="assets/svg/marvel-logo.svg" />
         </a>
       </div>
     </div>
 
     <div class="header__search">
-      <div  class="header__search_content">
-        <a [routerLink]="['/']" >
-          <img  src="assets/svg/search-white.svg" />
+      <div class="header__search_content">
+        <a [routerLink]="['/']">
+          <img src="assets/svg/search-white.svg" />
         </a>
       </div>
     </div>
   </div>
-  <div class="menu" >
-    <div>
-      <ul  class="menu__items" >
-        <li><a [routerLink]="['/']" class="desktopNav__link" href="#">Home</a></li>
-        <li><a [routerLink]="['/']" class="desktopNav__link" href="#">Search</a></li>
-        <li><a [routerLink]="['/']" class="desktopNav__link" href="#">Comics</a></li>
-        <li><a [routerLink]="['/']" class="desktopNav__link" href="#">Movies</a></li>
-      </ul>
-    </div>
-  </div>
-  <app-mobile-menu [open]="navState" (close)="closeNav($event)"></app-mobile-menu>
+  <app-desktop-menu></app-desktop-menu>
+  <app-mobile-menu
+    [open]="navState"
+    (close)="closeNav($event)"
+  ></app-mobile-menu>
 </header>

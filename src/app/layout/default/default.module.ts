@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { DesktopMenuComponent } from './desktop-menu/desktop-menu.component';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
     HeaderComponent,
     FooterComponent,
     MobileMenuComponent,
+    DesktopMenuComponent,
     
     
   ],
