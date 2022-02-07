@@ -1,0 +1,12 @@
+<div>
+  <nav class="mobile-nav" [ngClass]="{ opening: open, closeing:close }">
+    <div class="nav-close">
+      <a href="javascript: void(0);" class="nav-close__link" (click)="closeMenu()">
+        <img class="nav-close__image" src="assets/svg/close-nave.svg" />
+      </a>
+    </div>
+  <ul class="nav__items">
+    <li><a [routerLink]="['/']" (click)="closeMenu()">HOME</a>  </li>
+  </ul>
+  </nav>
+</div>
