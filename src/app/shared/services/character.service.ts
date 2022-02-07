@@ -13,7 +13,7 @@ export class CharacterService {
   private hashKey = '';
   timeStamp = '';
 
-  basePath = 'http://gateway.marvel.com/v1/public/';
+  basePath = 'https://gateway.marvel.com/v1/public/';
   resource = 'characters'
 
   constructor(private http: HttpClient) {
