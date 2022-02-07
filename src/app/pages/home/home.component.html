@@ -1,7 +1,10 @@
 <section class="container">
-
-<app-shared-searchbar (onChange)="onChangeInput($event)"></app-shared-searchbar>
-
+  <app-shared-searchbar
+    (onChange)="onChangeInput($event)"
+  ></app-shared-searchbar>
+  <div class="fetching" *ngIf="fetching">Pesquisando...</div>
+  <div class="warning" *ngIf="warning">Não foi encontrado Nenhum Registro</div>
+  <div class="error" *ngIf="error">Erro ao efetuar a pesquisa</div>
   <div class="search-result">
     <div class="cards-content">
       <app-shared-character-card

@@ -30,3 +30,18 @@
     grid-template-columns: repeat(auto-fit, minmax(192px, 1fr));
   }
 }
+
+
+.fetching{
+  color: rgb(46, 122, 63);
+  font-weight: 500;
+}
+.warning{
+  color: rgb(229 159 2);
+  font-weight: 500;
+}
+
+.error{
+  color: red;
+  font-weight: 500;
+}
