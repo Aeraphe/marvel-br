@@ -1,0 +1,22 @@
+<section class="container">
+  <header class="page-header">
+    <div   class="page-header__img">
+      <img
+      
+        [src]="characterThumbnail.path + '.' + characterThumbnail.extension"
+      />
+    </div>
+
+    <div class="page-header__character_name">{{ characterInfo.name }}</div>
+  </header>
+
+  <article class="page-title">
+    <h3>Comics List: ({{ characterInfo.comics?.available }})</h3>
+  </article>
+
+  <article class="page-content">
+    <ul>
+      <li *ngFor="let item of characterInfo.comics?.items">{{ item?.name }}</li>
+    </ul>
+  </article>
+</section>
