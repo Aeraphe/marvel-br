@@ -17,6 +17,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "crypto-js"
+           ],
             "outputPath": "dist/marvel-search",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -25,6 +28,7 @@
             "assets": [
               "src/favicon.ico",
               "src/assets"
+        
             ],
             "styles": [
               "src/styles.css"
@@ -85,6 +89,7 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
+            
             "main": "src/test.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
