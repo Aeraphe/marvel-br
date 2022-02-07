@@ -17,7 +17,7 @@ export class SearchbarComponent implements OnInit {
   ngOnInit(): void {}
 
   onChangeHandler(evt:any){
-    console.log(evt.target.value)
+   
     this.onChange.emit(evt.target.value)
   }
 

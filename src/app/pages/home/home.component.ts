@@ -11,23 +11,19 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit {
   characters$: Observable<any> = new Observable<any>();
 
-  constructor(private http: CharacterService,private router:Router) {}
+  constructor(private http: CharacterService, private router: Router) {}
 
   ngOnInit(): void {}
 
   onChangeInput(searchText: string) {
     this.characters$ = this.http.getCharacters(searchText).pipe(
       map((item) => {
-        console.log(item.data.results);
         return item.data.results;
       })
     );
   }
 
-  showCharacterDetails(id:number){
-
-    this.router.navigate(['/character-details/' +id]) 
-    console.log(id,"show");
+  showCharacterDetails(id: number) {
+    this.router.navigate(['/character-details/' + id]);
   }
-
 }

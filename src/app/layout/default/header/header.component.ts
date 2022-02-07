@@ -15,7 +15,7 @@ export class HeaderComponent implements OnInit {
 
   openNav(){
     this.navState = true;
-    console.log("Open")
+
   }
 
   closeNav(state:any){
