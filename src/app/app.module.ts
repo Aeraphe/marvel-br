@@ -4,26 +4,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DefaultModule } from './layout/default/default.module';
-import { NotFoundComponent } from './pages/not-found/not-found.component';
-import {HttpClient, HttpClientModule} from "@angular/common/http";
-import { SharedModule } from './shared/shared.module';
-import { CharacterDetailsComponent } from './pages/character-details/character-details.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { PagesModule } from './pages/pages.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NotFoundComponent,
-    CharacterDetailsComponent,
-
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     DefaultModule,
     HttpClientModule,
-    SharedModule
+    PagesModule,
   ],
   providers: [HttpClient],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
