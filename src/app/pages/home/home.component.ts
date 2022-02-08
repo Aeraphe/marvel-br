@@ -39,7 +39,7 @@ export class HomeComponent implements OnInit {
             if (+item.data.total === 0) {
               this.warning = true;
             }
-
+            console.log(item.data.results)
             return item.data.results;
           })
         );

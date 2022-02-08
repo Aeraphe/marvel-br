@@ -1,21 +1,37 @@
-<section class="container">
-  <app-shared-searchbar
-    (onChange)="onChangeInput($event)"
-    [searchText]="searchText"
-  ></app-shared-searchbar>
-  <div class="fetching" *ngIf="fetching">Pesquisando...</div>
-  <div class="warning" *ngIf="warning">Não foi encontrado Nenhum Registro</div>
-  <div class="error" *ngIf="error">Erro ao efetuar a pesquisa</div>
-  <div class="search-result">
-    <div class="cards-content">
-      <div class="cards-content__mobile" *ngFor="let character of characters$ | async">
-
-        <app-shared-character-card
-        
-        [character]="character"
-        (onClick)="showCharacterDetails($event)"
-        ></app-shared-character-card>
+<section>
+  <header class="header">
+    <div class="header__image_background">
+      <div class="header__title_container">
+        <span class="hearde__text header__title">MARVEL CHARACTERS</span>
+        <span class="hearde__text header__subtitle"
+          >Get hooked on a hearty helping of heroes and villains from the humble
+          House of Ideas!</span
+        >
       </div>
     </div>
-  </div>
+  </header>
+  <main class="search-container">
+    <app-shared-searchbar
+      (onChange)="onChangeInput($event)"
+      [searchText]="searchText"
+    ></app-shared-searchbar>
+    <div class="fetching" *ngIf="fetching">Pesquisando...</div>
+    <div class="warning" *ngIf="warning">
+      Não foi encontrado Nenhum Registro
+    </div>
+    <div class="error" *ngIf="error">Erro ao efetuar a pesquisa</div>
+    <div class="search-result">
+      <div class="cards-content">
+        <div
+          class="cards-content__mobile"
+          *ngFor="let character of characters$ | async"
+        >
+          <app-shared-character-card
+            [character]="character"
+            (onClick)="showCharacterDetails($event)"
+          ></app-shared-character-card>
+        </div>
+      </div>
+    </div>
+  </main>
 </section>
