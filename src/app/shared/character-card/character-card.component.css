@@ -3,6 +3,7 @@
   margin: 5px;
   background-color: black;
   height: 242px;
+  clip-path: polygon(0 0,100% 0, 100% 227px,180px 100%,0 100% );
 }
 
 .card__header {
@@ -11,6 +12,8 @@
   padding: 0;
   border-bottom: 3px solid red;
   height: 142px;
+
+
 }
 .card__header img {
   width: 192px;
