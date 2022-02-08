@@ -18,6 +18,10 @@ export class HomeComponent implements OnInit {
   constructor(private http: CharacterService, private router: Router) {}
 
   ngOnInit(): void {
+    this.getLastSearchHandle();
+  }
+
+  private getLastSearchHandle() {
     this.searchText = sessionStorage.getItem('searchText');
     this.getCharactersHandle(this.searchText);
   }
@@ -39,7 +43,7 @@ export class HomeComponent implements OnInit {
             if (+item.data.total === 0) {
               this.warning = true;
             }
-            console.log(item.data.results)
+           
             return item.data.results;
           })
         );
