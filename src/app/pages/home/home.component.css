@@ -68,13 +68,7 @@
   }
 }
 
-@media (max-width: 600px) {
-  .cards-content__mobile {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    border: 17px solid;
-    margin-bottom: 10px;
-  }
-
+@media (max-width: 700px) {
   .header {
     height: 10vh;
   }
@@ -83,6 +77,14 @@
   }
   .header__subtitle {
     display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .cards-content__mobile {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border: 17px solid;
+    margin-bottom: 10px;
   }
 }
 
