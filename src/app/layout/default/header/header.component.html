@@ -18,8 +18,11 @@
 
     <div class="header__nav">
       <div class="header__nav_container">
-        <a [routerLink]="['/']">
+        <a class="header__nav_item header__nav_item--search" [routerLink]="['/']">
           <img src="assets/svg/search-white.svg" />
+        </a>
+        <a class="header__nav_item header__nav_item--login" [routerLink]="['/login']">
+          Login
         </a>
       </div>
     </div>
