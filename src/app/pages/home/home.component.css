@@ -38,15 +38,11 @@
 }
 
 .search-container {
-  margin: 10px 27px 27px;
-  padding: 10px 20px 0px;
+  margin: 1rem 2.7rem 2.7rem;
+  padding: 1rem 2.0rem 0px;
 }
 
 .search-result {
-  display: flex;
-
-  height: auto;
-  width: 100%;
   margin-top: 15px;
 }
 
@@ -55,16 +51,15 @@
   overflow: hidden;
   align-items: center;
   justify-content: center;
-
   place-items: center;
-  height: auto;
-  width: 100%;
+
 }
 
 @media (min-width: 600px) {
   .cards-content {
     grid-template-columns: repeat(auto-fit, minmax(192px, 1fr));
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 1rem 1rem 0;
   }
 }
 
