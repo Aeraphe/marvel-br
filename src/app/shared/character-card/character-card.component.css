@@ -4,6 +4,8 @@
   background-color: black;
   height: 242px;
   clip-path: polygon(0 0,100% 0, 100% 227px,180px 100%,0 100% );
+  font-size: 1.6rem;
+  width: 192px;
 }
 
 .card__header {
