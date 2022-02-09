@@ -11,7 +11,10 @@
 
   background-size: cover;
   background-position: top;
+
 }
+
+
 
 .header__title_container {
   position: absolute;
@@ -39,7 +42,7 @@
 
 .search-container {
   margin: 1rem 2.7rem 2.7rem;
-  padding: 1rem 2.0rem 0px;
+  padding: 1rem 2rem 0px;
 }
 
 .search-result {
@@ -52,7 +55,6 @@
   align-items: center;
   justify-content: center;
   place-items: center;
-
 }
 
 @media (min-width: 600px) {
@@ -72,6 +74,12 @@
   }
   .header__subtitle {
     display: none;
+  }
+  .header__image_background {
+    min-height: 9.0rem;
+  }
+  .search-container {
+    margin: 3rem 2.7rem 2.7rem;
   }
 }
 
