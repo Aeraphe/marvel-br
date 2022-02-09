@@ -61,7 +61,7 @@
   .cards-content {
     grid-template-columns: repeat(auto-fit, minmax(192px, 1fr));
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    padding: 1rem 1rem 0;
+ 
   }
 }
 
