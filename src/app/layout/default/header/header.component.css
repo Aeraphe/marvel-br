@@ -66,6 +66,10 @@ a:visited {
   padding-left: 11px;
 }
 
+.header__nav .active{
+  color: red;
+}
+
 @media (min-width: 839px) {
   .header__mobile_btn_container {
     display: none;
