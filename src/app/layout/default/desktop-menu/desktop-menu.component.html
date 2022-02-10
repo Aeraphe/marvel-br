@@ -1,10 +1,11 @@
-<div class="menu" >
-    <div>
-      <ul  class="menu__items" >
-        <li><a [routerLink]="['/home']" class="desktopNav__link" >Home</a></li>
-        <li><a [routerLink]="['/characters']" class="desktopNav__link" >Search</a></li>
-        <li><a [routerLink]="['/comics']" class="desktopNav__link" >Comics</a></li>
-        <li><a [routerLink]="['/movies']" class="desktopNav__link" >Movies</a></li>
-      </ul>
-    </div>
+<div class="menu">
+  <div>
+    <ul class="menu__items">
+      <li *ngFor="let item of menuItem">
+        <a [routerLink]="[item.route]" routerLinkActive="active" class="desktopNav__link ">{{
+          item.name
+        }}</a>
+      </li>
+    </ul>
   </div>
+</div>

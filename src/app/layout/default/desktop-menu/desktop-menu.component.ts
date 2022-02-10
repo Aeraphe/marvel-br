@@ -1,15 +1,16 @@
 import { Component, OnInit } from '@angular/core';
+import { menuItem } from '../menuItems';
 
 @Component({
   selector: 'app-desktop-menu',
   templateUrl: './desktop-menu.component.html',
-  styleUrls: ['./desktop-menu.component.css']
+  styleUrls: ['./desktop-menu.component.css'],
 })
 export class DesktopMenuComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
+  menuItem: any = [];
+  constructor() {
+    this.menuItem = menuItem;
   }
 
+  ngOnInit(): void {}
 }
