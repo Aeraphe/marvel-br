@@ -36,6 +36,9 @@
   padding: 15px 0;
 }
 
+.nav__items .active{
+  color: red;
+}
 .nav__item_name {
   margin-left: 10px;
 }

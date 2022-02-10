@@ -22,7 +22,7 @@ export class MobileMenuComponent implements OnInit, OnChanges {
 
   close = false;
 
-  menuItem = [''];
+  menuItem:any = [];
 
   constructor() {}
 
