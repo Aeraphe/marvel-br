@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { SharedModule } from '../shared/shared.module';
 import { LoginComponent } from './login/login.component';
+import { AdminComponent } from './admin/admin.component';
 
 
 
@@ -14,7 +15,8 @@ import { LoginComponent } from './login/login.component';
     NotFoundComponent,
     CharacterDetailsComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    AdminComponent
   ],
   imports: [
     CommonModule,
