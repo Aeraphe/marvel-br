@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { CharacterService } from './services/character.service';
 import { CharacterCardComponent } from './character-card/character-card.component';
 import { SearchbarComponent } from './searchbar/searchbar.component';
+import { AuthenticateService } from './services/authenticate.service';
 
 
 
@@ -15,7 +16,8 @@ import { SearchbarComponent } from './searchbar/searchbar.component';
     CommonModule
   ],
   providers: [
-    CharacterService
+    CharacterService,
+    AuthenticateService
   ],exports:[CharacterCardComponent,SearchbarComponent]
 })
 export class SharedModule { }
