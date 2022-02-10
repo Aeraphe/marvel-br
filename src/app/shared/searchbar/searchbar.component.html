@@ -5,6 +5,6 @@
           <img src="assets/svg/search-black.svg" />
         </span>
       </div>
-      <input minlength="3" placeholder="Search"  [value]="searchText"  (keyup.enter)="onChangeHandler($event)" class="search__input" type="text" />
+      <input minlength="3" placeholder="Search"  [value]="searchText"  (keydown.enter)="onChangeHandler($event)"   class="search__input" type="text" />
     </div>
   </div>
