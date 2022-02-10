@@ -21,7 +21,8 @@ export class AuthenticateService {
 
   logout() {
     sessionStorage.setItem('loggedin', 'false');
-    this.router.navigate(['login']);
+    this.subject.next('fasle');
+
   }
 
   isLoggedIn(): Observable<string> {
