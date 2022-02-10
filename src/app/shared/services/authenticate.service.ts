@@ -2,37 +2,35 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { of, BehaviorSubject, Observable, map } from 'rxjs';
 
-
 @Injectable({
   providedIn: 'root',
 })
 export class AuthenticateService {
   private subject = new BehaviorSubject<any>(false);
-  auth$: Observable<any> = this.subject.asObservable();
+  private isLoggedIn$: Observable<any> = this.subject.asObservable();
 
-  isLoggedIn$: Observable<boolean>;
-
-  constructor(private router:Router) {
-    this.isLoggedIn$ = this.auth$.pipe(map((auth) => auth));
+  constructor(private router: Router) {
+    this.isLoggedIn$.pipe(map((auth) => auth));
   }
 
   login(): Observable<any> {
     sessionStorage.setItem('loggedin', 'true');
+    this.subject.next('true');
     return of({ name: 'admin', email: 'admin@gmail.com' });
   }
 
   logout() {
     sessionStorage.setItem('loggedin', 'false');
-    this.router.navigate(['login'])
-
+    this.router.navigate(['login']);
   }
 
-  isLoggedIn() {
+  isLoggedIn(): Observable<string> {
     let isLogged = sessionStorage.getItem('loggedin');
-
-    if (isLogged === 'true') {
-      return true;
+    if (isLogged) {
+      this.subject.next(isLogged);
+    } else {
+      this.subject.next('false');
     }
-    return false;
+    return this.isLoggedIn$;
   }
 }
