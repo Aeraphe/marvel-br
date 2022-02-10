@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { DefaultModule } from './layout/default/default.module';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { PagesModule } from './pages/pages.module';
+import { AuthGuard } from './guards/auth.guard';
 
 @NgModule({
   declarations: [AppComponent],
@@ -16,7 +17,7 @@ import { PagesModule } from './pages/pages.module';
     HttpClientModule,
     PagesModule,
   ],
-  providers: [HttpClient],
+  providers: [HttpClient,AuthGuard],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
