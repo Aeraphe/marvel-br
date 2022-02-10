@@ -42,12 +42,6 @@
 }
 
 
-@media (min-width: 961px){
-    .page-header__character_name{
-        font: 400 50px/1 RobotoCondensed Bold;
-    }
-}
-
 
 .page-content{
     display: flex;
@@ -74,4 +68,12 @@
     font: 800 16px/1 RobotoCondensed,Trebuchet MS,Helvetica,Arial,sans-serif;
     letter-spacing: 1px;
     text-transform: uppercase;
+}
+
+
+
+@media (min-width: 961px){
+    .page-header__character_name{
+        font: 400 50px/1 RobotoCondensed Bold;
+    }
 }
