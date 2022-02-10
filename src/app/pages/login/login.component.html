@@ -1,9 +1,9 @@
 <section class="container">
-  <div class="card">
+  <div *ngIf="isLoggin == 'false'" class="card">
     <header class="card__header">Login</header>
     <main>
       <div class="form-container">
-        <form >
+        <form>
           <div class="form-control">
             <label for="email">e-mail</label>
             <input id="email" type="email" placeholder="email" />
@@ -13,15 +13,18 @@
             <label for="password"> Password</label>
             <input id="password" type="password" placeholder="password" />
           </div>
-
         </form>
       </div>
     </main>
     <footer class="card__footer">
-        <div class="form-control">
-
-            <button  (click)="onSubmit()" class="btn">Login</button>
-          </div>
+      <div class="form-control">
+        <button (click)="onSubmit()" class="btn">Login</button>
+      </div>
     </footer>
+  </div>
+  <div *ngIf="isLoggin == 'true'">
+    <div class="form-control">
+      <button (click)="logOut()" class="btn">Logout</button>
+    </div>
   </div>
 </section>

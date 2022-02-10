@@ -8,10 +8,16 @@ import { AuthenticateService } from 'src/app/shared/services/authenticate.servic
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
+  isLoggin = 'false';
+
   constructor(
     private router: Router,
     private authService: AuthenticateService
-  ) {}
+  ) {
+    this.authService.isLoggedIn().subscribe((is) => {
+      this.isLoggin = is;
+    });
+  }
 
   ngOnInit(): void {}
 
@@ -20,6 +26,10 @@ export class LoginComponent implements OnInit {
       console.log(user);
     });
     this.router.navigate(['/admin']);
-    console.log('login');
+  }
+
+  logOut() {
+    this.authService.logout();
+    this.isLoggin = 'false';
   }
 }

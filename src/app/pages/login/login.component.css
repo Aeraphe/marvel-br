@@ -53,14 +53,14 @@
   padding-left: 5px;
 }
 
-.form-control .btn {
-  height: 3.7rem;
-
-  width: 35%;
+.btn {
+  height: auto;
+  width: auto;
   font-size: 1.5rem;
   text-transform: uppercase;
-  padding-left: 0px;
+  padding: 11px;
   margin: 0px;
+  cursor: pointer;
 }
 
 .card__footer {
