@@ -1,0 +1,27 @@
+<section class="container">
+  <div class="card">
+    <header class="card__header">Login</header>
+    <main>
+      <div class="form-container">
+        <form >
+          <div class="form-control">
+            <label for="email">e-mail</label>
+            <input id="email" type="email" placeholder="email" />
+          </div>
+
+          <div class="form-control">
+            <label for="password"> Password</label>
+            <input id="password" type="password" placeholder="password" />
+          </div>
+
+        </form>
+      </div>
+    </main>
+    <footer class="card__footer">
+        <div class="form-control">
+
+            <button  (submit)="onSubmit()" class="btn">Login</button>
+          </div>
+    </footer>
+  </div>
+</section>

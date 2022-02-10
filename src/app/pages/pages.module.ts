@@ -4,6 +4,7 @@ import { CharacterDetailsComponent } from './character-details/character-details
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { SharedModule } from '../shared/shared.module';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -12,7 +13,8 @@ import { SharedModule } from '../shared/shared.module';
   declarations: [
     NotFoundComponent,
     CharacterDetailsComponent,
-    HomeComponent
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     CommonModule,

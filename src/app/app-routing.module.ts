@@ -3,14 +3,18 @@ import { RouterModule, Routes } from '@angular/router';
 import { DefaultComponent } from './layout/default/default.component';
 import { CharacterDetailsComponent } from './pages/character-details/character-details.component';
 import { HomeComponent } from './pages/home/home.component';
+import { LoginComponent } from './pages/login/login.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 const routes: Routes = [
   {
     path: '',
     component: DefaultComponent,
-    children: [{ path: '', component: HomeComponent },{path:'character-details/:id',component:CharacterDetailsComponent}],
-    
+    children: [
+      { path: '', component: HomeComponent },
+      { path: 'character-details/:id', component: CharacterDetailsComponent },
+      { path: 'login', component: LoginComponent },
+    ],
   },
   { path: '', redirectTo: '', pathMatch: 'full' },
   { path: '**', component: NotFoundComponent },
