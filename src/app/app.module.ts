@@ -7,6 +7,7 @@ import { DefaultModule } from './layout/default/default.module';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { PagesModule } from './pages/pages.module';
 import { AuthGuard } from './guards/auth.guard';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent],
@@ -16,6 +17,7 @@ import { AuthGuard } from './guards/auth.guard';
     DefaultModule,
     HttpClientModule,
     PagesModule,
+    ReactiveFormsModule
   ],
   providers: [HttpClient,AuthGuard],
   bootstrap: [AppComponent],
