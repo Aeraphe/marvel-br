@@ -83,7 +83,7 @@ input.ng-touched.ng-invalid {
   cursor: pointer;
 }
 
-@media (min-width: 600px) {
+@media (orientation: landscape) {
   .container {
     align-items: flex-start;
   }
@@ -97,7 +97,7 @@ input.ng-touched.ng-invalid {
   }
 }
 
-@media screen and (min-width: 900px) {
+@media (min-width: 884px) {
   .container {
     align-items: center;
     background-color: rgb(204, 62, 62);
@@ -106,7 +106,7 @@ input.ng-touched.ng-invalid {
   .card {
     grid-template-rows: 1fr 3fr 1fr;
     margin: 0;
-    transform: translateY(-150px);
+    transform: translateY(-100px);
     &__footer {
       display: block;
     }
