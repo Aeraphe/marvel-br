@@ -6,7 +6,7 @@ import { CharacterService } from 'src/app/shared/services/character.service';
 @Component({
   selector: 'app-character-details',
   templateUrl: './character-details.component.html',
-  styleUrls: ['./character-details.component.css'],
+  styleUrls: ['./character-details.component.scss'],
 })
 export class CharacterDetailsComponent implements OnInit {
   characterInfo: any = {};

@@ -13,7 +13,7 @@ import { menuItem } from '../menuItems';
 @Component({
   selector: 'app-mobile-menu',
   templateUrl: './mobile-menu.component.html',
-  styleUrls: ['./mobile-menu.component.css'],
+  styleUrls: ['./mobile-menu.component.scss'],
 })
 export class MobileMenuComponent implements OnInit, OnChanges {
   @Input() open: boolean = false;

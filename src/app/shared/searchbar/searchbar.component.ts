@@ -3,7 +3,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 @Component({
   selector: 'app-shared-searchbar',
   templateUrl: './searchbar.component.html',
-  styleUrls: ['./searchbar.component.css'],
+  styleUrls: ['./searchbar.component.scss'],
 })
 export class SearchbarComponent implements OnInit {
   @Output() onChange: EventEmitter<string> = new EventEmitter<string>();
