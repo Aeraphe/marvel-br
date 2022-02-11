@@ -6,6 +6,7 @@ import {
   SimpleChanges,
   EventEmitter,
   Output,
+  Renderer2,
 } from '@angular/core';
 
 import { menuItem } from '../menuItems';
@@ -22,13 +23,16 @@ export class MobileMenuComponent implements OnInit, OnChanges {
 
   close = false;
 
-  menuItem:any = [];
+  menuItem: any = [];
 
-  constructor() {}
+  constructor(private render: Renderer2) {}
 
   ngOnChanges(changes: SimpleChanges) {
     if (changes['open'].currentValue) {
       this.close = !changes['open'].currentValue;
+      this.render.addClass(document.body, 'mobily-menu--open');
+    } else {
+      this.render.removeClass(document.body, 'mobily-menu--open');
     }
   }
 
