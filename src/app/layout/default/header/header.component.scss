@@ -43,6 +43,7 @@
 
   &__nav_item {
     margin-right: 15px;
+    color: white;
   }
 
   &__nav_item--search {
@@ -51,7 +52,6 @@
 
   &__nav a:link,
   a:visited {
-    color: white;
     display: inline-block;
     width: 41px;
     text-align: center;
