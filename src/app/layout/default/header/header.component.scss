@@ -1,73 +1,72 @@
 .header {
   margin: 0;
   padding: 0;
-}
 
-.header__container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-.header__container_theme {
-  height: 52px;
+  &__container_theme {
+    height: 52px;
 
-  background-color: #202020;
-  color: aliceblue;
-  border-bottom: solid 1px #ffffff;
-  border-color: #393939;
-}
+    background-color: #202020;
+    color: aliceblue;
+    border-bottom: solid 1px #ffffff;
+    border-color: #393939;
+  }
 
-.header__mobile_btn {
-  position: relative;
-  display: flex;
-  height: 100%;
-  z-index: 1;
-  width: 112px;
-  align-items: center;
-  padding-left: 30px;
-  padding-right: 15px;
-}
+  &__mobile_btn {
+    position: relative;
+    display: flex;
+    height: 100%;
+    z-index: 1;
+    width: 112px;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 15px;
+  }
 
-.header__nav {
-  border-left: solid 1px #ffffff;
-  border-color: #393939;
-  height: 100%;
-}
-.header__nav_container {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
+  &__nav {
+    border-left: solid 1px #ffffff;
+    border-color: #393939;
+    height: 100%;
+  }
+  &__nav_container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 
-  height: 100%;
-}
+    height: 100%;
+  }
 
-.header__nav a:link,
-a:visited {
-  color: white;
-  display: inline-block;
-  width: 41px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 1.6rem;
-  transition: all .2s;
-}
+  &__nav a:link,
+  a:visited {
+    color: white;
+    display: inline-block;
+    width: 41px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.6rem;
+    transition: all 0.2s;
+  }
 
-.header__nav a:hover {
-  color: rgba(255, 0, 0, 0.733);
-  
-}
+  &__nav a:hover {
+    color: rgba(255, 0, 0, 0.733);
+  }
 
-.header__nav_item {
-  margin-right: 15px;
-}
+  &__nav_item {
+    margin-right: 15px;
+  }
 
-.header__nav_item--search {
-  padding-left: 11px;
-}
+  &__nav_item--search {
+    padding-left: 11px;
+  }
 
-.header__nav .active{
-  color: red;
+  &__nav .active {
+    color: red;
+  }
 }
 
 @media (min-width: 839px) {
