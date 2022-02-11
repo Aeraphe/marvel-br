@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { json } from 'express';
 import { of, BehaviorSubject, Observable, map } from 'rxjs';
+import { User } from '../interfaces/user';
 
 @Injectable({
   providedIn: 'root',
@@ -13,10 +15,11 @@ export class AuthenticateService {
     this.isLoggedIn$.pipe(map((auth) => auth));
   }
 
-  login(): Observable<any> {
+  login(user:User): Observable<any> {
     sessionStorage.setItem('loggedin', 'true');
+    sessionStorage.setItem('user-email',user.email);
     this.subject.next('true');
-    return of({ name: 'admin', email: 'admin@gmail.com' });
+    return of(user);
   }
 
   logout() {
