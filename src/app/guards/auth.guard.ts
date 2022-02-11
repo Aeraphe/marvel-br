@@ -13,10 +13,20 @@ import { AuthenticateService } from '../shared/services/authenticate.service';
   providedIn: 'root',
 })
 export class AuthGuard implements CanActivate {
+  isloggin: boolean = false;
+
   constructor(
     private authService: AuthenticateService,
     private router: Router
-  ) {}
+  ) {
+    this.authService.isLoggedIn().subscribe((is) => {
+      if (is === 'true') {
+        this.isloggin = true;
+      } else {
+        this.isloggin = false;
+      }
+    });
+  }
 
   canActivate(
     route: ActivatedRouteSnapshot,
@@ -26,10 +36,9 @@ export class AuthGuard implements CanActivate {
     | Promise<boolean | UrlTree>
     | boolean
     | UrlTree {
-    if (this.authService.isLoggedIn()) {
+    if (this.isloggin) {
       return true;
     }
-
     this.router.navigate(['login']);
     return false;
   }
