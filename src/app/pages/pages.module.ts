@@ -6,6 +6,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { SharedModule } from '../shared/shared.module';
 import { LoginComponent } from './login/login.component';
 import { AdminComponent } from './admin/admin.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -20,7 +21,8 @@ import { AdminComponent } from './admin/admin.component';
   ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule
   ]
 })
 export class PagesModule { }

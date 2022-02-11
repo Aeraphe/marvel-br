@@ -3,22 +3,64 @@
     <header class="card__header">Login</header>
     <main>
       <div class="form-container">
-        <form>
+        <form [formGroup]="formGroup">
           <div class="form-control">
-            <label for="email">e-mail</label>
-            <input id="email" type="email" placeholder="email" />
+            <label for="email"
+              >e-mail
+              <div
+                class="alert"
+                *ngIf="
+                  formGroup.get('email')?.invalid &&
+                  (formGroup.get('email')?.dirty ||
+                    formGroup.get('email')?.touched)
+                "
+              >
+                <span *ngIf="formGroup.get('email')?.errors">(Required)</span>
+              </div>
+            </label>
+            <input
+              required
+              formControlName="email"
+              name="email"
+              id="email"
+              type="email"
+              placeholder="email"
+            />
           </div>
 
           <div class="form-control">
-            <label for="password"> Password</label>
-            <input id="password" type="password" placeholder="password" />
+            <label for="password">
+              Password
+              <div
+                class="alert"
+                *ngIf="
+                  formGroup.get('password')?.invalid &&
+                  (formGroup.get('password')?.dirty ||
+                    formGroup.get('password')?.touched)
+                "
+              >
+                <span *ngIf="formGroup.get('password')?.errors"
+                  >(Required)</span
+                >
+              </div></label
+            >
+            <input
+              required
+              formControlName="password"
+              name="password"
+              id="password"
+              type="password"
+              placeholder="password"
+            />
           </div>
         </form>
       </div>
     </main>
     <footer class="card__footer">
       <div class="form-control">
-        <button (click)="onSubmit()" class="btn">Login</button>
+        <button [disabled]="!formGroup.valid" (click)="onSubmit()" class="btn">
+          Login
+        </button>
       </div>
     </footer>
   </div>
