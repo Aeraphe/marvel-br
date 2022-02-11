@@ -1,11 +1,8 @@
 .container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100%;
   width: 100%;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  height: 100%;
 }
 .card {
   display: grid;
@@ -13,44 +10,67 @@
   grid-template-rows: 35px 3fr 51px;
   grid-template-columns: 1fr;
   width: 85%;
+  height: 275px;
+  margin: 20% 0% 0 0;
   border-radius: 9px;
   background-color: rgb(255, 255, 255);
   text-align: center;
   box-shadow: 3px 3px 21px rgba(0, 0, 0, 0.2);
   max-width: 350px;
   padding: 15px;
+
+  &__header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    font-size: 3rem;
+    text-transform: uppercase;
+  }
+
+  &__footer {
+    display: block;
+  }
 }
 
-.card__header {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  font-size: 3rem;
-  text-transform: uppercase;
+.form {
+  &-container {
+    margin-top: 2.7rem;
+    width: 100%;
+  }
+  &-control {
+    margin: 11px;
+
+    label {
+      display: block;
+      text-align: left;
+      margin-bottom: 1px;
+      font-size: 1.7rem;
+      color: rgba(0, 0, 0, 0.712);
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    input {
+      height: 3.3rem;
+      width: 100%;
+      padding-left: 5px;
+    }
+  }
 }
 
-.form-container {
-  margin-top: 2.7rem;
-  width: 100%;
+.alert {
+  color: red;
+  display: inline;
+  margin-left: 0.5rem;
+
+  & span {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+  }
 }
 
-.form-control {
-  margin: 11px;
-}
-.form-control label {
-  display: block;
-  text-align: left;
-  margin-bottom: 1px;
-  font-size: 1.7rem;
-  color: rgba(0, 0, 0, 0.712);
-  text-transform: uppercase;
-  font-weight: 600;
-}
-
-.form-control input {
-  height: 3.3rem;
-  width: 100%;
-  padding-left: 5px;
+input.ng-touched.ng-invalid {
+  border: 1px solid red;
 }
 
 .btn {
@@ -63,29 +83,32 @@
   cursor: pointer;
 }
 
-.card__footer {
-  display: block;
-}
-
 @media (min-width: 600px) {
+  .container {
+    align-items: flex-start;
+  }
+
   .card {
     grid-template-rows: 30px 3fr 51px;
-  }
-
-  .card__header {
-    font-size: 2.8rem;
+    margin-top: 11px;
+    &__header {
+      font-size: 2.8rem;
+    }
   }
 }
 
-@media (min-width: 900px) {
+@media screen and (min-width: 900px) {
+  .container {
+    align-items: center;
+    background-color: rgb(204, 62, 62);
+  }
+
   .card {
     grid-template-rows: 1fr 3fr 1fr;
-  }
-  .card__footer {
-    display: block;
-  }
-  .container {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    margin: 0;
+    transform: translateY(-150px);
+    &__footer {
+      display: block;
+    }
   }
 }
