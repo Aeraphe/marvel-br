@@ -41,6 +41,14 @@
     height: 100%;
   }
 
+  &__nav_item {
+    margin-right: 15px;
+  }
+
+  &__nav_item--search {
+    padding-left: 11px;
+  }
+
   &__nav a:link,
   a:visited {
     color: white;
@@ -54,14 +62,6 @@
 
   &__nav a:hover {
     color: rgba(255, 0, 0, 0.733);
-  }
-
-  &__nav_item {
-    margin-right: 15px;
-  }
-
-  &__nav_item--search {
-    padding-left: 11px;
   }
 
   &__nav .active {
